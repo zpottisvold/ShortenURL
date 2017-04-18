@@ -1,0 +1,182 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:300);
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/bg.jpg");
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  /*overflow: hidden;*/
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+div {
+	display: block;
+}
+
+#header {
+	padding-top: 2px;
+	text-align: center;
+	font-size: xx-large;
+}
+
+.roundCorners {
+	-webkit-border-radius: 6px;
+}
+
+#container {
+	border: solid 1px #202020;
+	background-color: #303030;
+	margin: 40px auto 20px;
+	padding: 20px 30px;
+	width: 600px;
+  box-shadow: 0px 0px 15px 5px #3a3a3a;
+}
+
+#label {
+	border-bottom: dashed 1px #202020;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+#smallWrapper {
+	border: solid 1px #3a3a3a;
+	border-bottom: solid 1px #252525;
+	border-right: solid 1px #252525;
+  box-shadow: 0px 0px 1px 1px #3a3a3a;
+	padding: 10px;
+	width: 580px;
+}
+
+.styledSelect {
+	display: inline-block;
+	width: 80%;
+	overflow: hidden;
+}
+
+.styledSelect select {
+	-webkit-appearance: none;
+	border: solid 1px #ccc;
+	font-size: 16px;
+	height: 30px;
+	width: 100%;
+	padding: 5px;
+}
+
+#button {
+	float: right;
+	display: inline-block;
+	text-align: center;
+}
+
+#save {
+	display: inline-block;
+	margin: 0 auto;
+
+	width: 78px;
+	height: 28px;
+	line-height: 28px;
+
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+	background: white;
+	border: solid 1px white;
+	color: black;
+
+	transition: all 0.5s;
+}
+
+#save:hover, #save:active {
+	background: #303030;
+	text-decoration: none;
+	color: white;
+	border-color: white;
+}
+
+#save span  {
+	display: inline-block;
+	position: relative;
+	padding-right: 0;
+	transition: padding-right 0.5s;
+}
+
+#save:hover span, #save:active span
+{
+  padding-right: 20px;
+}
+
+#save span:after {
+	content: ' ';
+	position: absolute;
+	border: solid 1px #303030;
+	border-top: none;
+  border-right: none;
+	background: rgba(0, 0, 0, 0);
+	width: 12px;
+  height: 6px;
+
+  top: 0;
+  right: -10px;
+  opacity: 0;
+
+	transition: opacity 0.5s, top 0.5s, right 0.5s;
+	transform: rotate(-45deg);
+}
+
+#save:hover span:after, #save:active span:after {
+	opacity: 1;
+	border-color: white;
+	top: 7px;
+	right: 0;
+	transition: opacity 0.5s, top 0.5s, right 0.5s;
+}
+
+/*'settings saved' animation*/
+.flash{
+
+  -moz-animation: flash 0.5s ease-out;
+  -moz-animation-iteration-count: 1;
+
+  -webkit-animation: flash 0.5s ease-out;
+  -webkit-animation-iteration-count: 1;
+
+  -ms-animation: flash 0.5s ease-out;
+  -ms-animation-iteration-count: 1;
+
+}
+
+@-webkit-keyframes flash {
+    0% { background-color:none;}
+    10% { background-color:#cccccc;}
+    100% {background-color:none;}
+}
+
+@-moz-keyframes flash {
+    0% { background-color:none;}
+    10% { background-color:#cccccc;}
+    100% {background-color:none;}
+}
+
+@-ms-keyframes flash {
+    0% { background-color:none;}
+    10% { background-color:#cccccc;}
+    100% {background-color:none;}
+}
